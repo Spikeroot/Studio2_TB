@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TB Week 2 Studio</title>
+    <!-- Connects Mapbox GL JS JavaScript file -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <!-- Links to the Mapbox GL JS CSS file -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Adds additional styling info for the map -->
+    <style>
+
+    body {
+      margin: 1;
+      padding: 0;
+    }
+    #mapId {
+
+      /* got annoyed with the absolute map, switched postiion back to static */
+      height: 450px;
+      width: 100%;
+      border: 3px inset black;
+    }
+    </style>
+    <!-- Links to base CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>TB Week 2 Studio <br> <i>Vector tiles with Mapbox GL JS</i> </h1>
+  <!-- Add multiple pages to web page-->
+  <!-- active class displays the grey-green box around current page-->
+  <ul>
+  	<li><a href="index.html" target="_self">Output 1</a></li>
+    <li><a class="active" href="Mapbox-gl-js-cwm.html" target="_self">Output 2</a></li>
+    <li><a href="Mapbox-gl-js-ct.html" target="_self">Output 3</a></li>
+    <li><a href="Mapbox-gl-js-bm.html" target="_self">Output 4</a></li>
+  </ul>
+  <br>
+
+    <!-- Container for the map -->
+    <div id='mapId'> </div>
+
+    <script>
+        // Mapbox GL JS access token
+      mapboxgl.accessToken = 'pk.eyJ1Ijoic3Bpa2Vyb290IiwiYSI6ImNrOGoxYXBkZTAydjEzZW1xNmNwMnB0aGgifQ.9aNdlgEoLWFufbanS404BA';
+        /* Initializes new map */
+         var map = new mapboxgl.Map ({
+            container: 'mapId',
+            style:'mapbox://styles/mapbox/streets-v11',
+            center: [-71.4508682,41.438419],
+            zoom: 15
+         });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TB Week 2 Studio </title>
+    <!-- Add Mapbox GL JS JavaScript file -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <!-- Add in the Mapbox GL JS CSS file -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <!-- Add styling info for the map -->
+    <style>
+
+         #mapId {
+      height: 370px;
+      width: 100%;
+      border: 1px solid #004B74;
+    }
+    </style>
+    <!-- Adding styling info for page layout by reading in a CSS file -->
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+  <h1>TB Week 2 Studio</h1>
+  <h2>custom style with mapbox gl js</h2>
+  <!-- Add multiple pages to web page-->
+  <!-- active class displays the grey box around current page-->
+  <ul>
+  	<li><a href="index.html" target="_self">OUTPUT 1</a></li>
+    <li><a href="Mapbox-gl-js-cwm.html" target="_self">OUTPUT 2</a></li>
+    <li><a href="Mapbox-gl-js-ct.html" target="_self">OUTPUT 3</a></li>
+    <li><a class="active" href="Mapbox-gl-js-bm.html" target="_self"><b>OUTPUT 4</b></a></li>
+  </ul>
+  <br>
+
+    <!-- Container for the map -->
+    <div id="mapId"></div>
+
+    <script>
+    // Set your Mapbox access token
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic3Bpa2Vyb290IiwiYSI6ImNrOGoxYXBkZTAydjEzZW1xNmNwMnB0aGgifQ.9aNdlgEoLWFufbanS404BA';
+
+    /* The map variable stores a new mapbox gl map.
+    * Set the style URL to your custom style
+    * Update the style with your custom style's Style URL.
+    * See the Style URL'S reference for more info: https://docs.mapbox.com/help/glossary/style-url/
+    */
+    var map = new mapboxgl.Map({
+    center: [-71.3991677,41.8159632],
+    zoom: 13,
+    style: "mapbox://styles/spikeroot/ck8jb9vu8130w1iqght9kyrtp",
+    container: "mapId"
+    });
+
+    </script>
+    <h3> About </h3>
+    <p>This custom MapBox style was created to align with the webpage design of the <a href='https://www.rihs.org/'>
+      Rhode Island Historical Society.</a> The RIHS maintains historical collections, operates several museums, and hosts education and public programs </b>
+      Colors for this style were selected based on RGB values taken from the RIHS website using
+      <a href='https://www.instant-eyedropper.com'>Instant Eyedropper.</a>
+    </p>
+</body>
+
+</html>
